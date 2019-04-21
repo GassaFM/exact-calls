@@ -1,5 +1,5 @@
 // Author: Ivan Kazmenko (gassa@mail.ru)
-// Generator for problem "cross-block"
+// Generator for problem "exact-calls"
 module gen;
 import std.algorithm;
 import std.conv;

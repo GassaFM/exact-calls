@@ -1,0 +1,74 @@
+\gdef\thisproblemorigin{190421, LIII SPbSU Championship}
+\gdef\thisproblemauthor{Ivan Kazmenko}
+\gdef\thisproblemdeveloper{Ivan Kazmenko}
+\begin{problem}{Exact Number of Calls}
+{\textsl{standard input}}{\textsl{standard output}}
+%{exact-calls.in}{exact-calls.out}
+{2 seconds}{512 mebibytes}{}
+
+Consider a flat rectangular field consisting of $r \times c$ squares.
+Some squares of the field are free, while others are blocked.
+
+Arkadiy the Robot wants to cover the field with dominoes.
+In order to do that, he assigns the value $0$ to his internal variable
+\texttt{counter}, and then calls the recursive function \texttt{Tile}
+shown below.
+
+\verbatiminput{program.en.txt}
+
+The variable \texttt{counter} is global
+(it is the same in all calls),
+while variables \texttt{row} and \texttt{col} are local
+(defined separately in each call).
+When a value is returned, the function terminates immediately.
+A ``call to \texttt{Tile}'' means a recursive call of the same function.
+The squares covered with dominoes are considered blocked.
+
+If function \texttt{Tile} returned \texttt{OK} to Arkadiy,
+the robot has successfully covered the field with dominoes.
+If the function returned \texttt{NO}, it means that Arkadiy
+tried all possible ways to cover the field, but was not successful.
+
+A friend of Arkadiy, Bertrand the Robot, heard from his hacker friends
+that Arkadiy is programmed to have some interesting behavior
+in case the field is covered by exactly $k$ calls to \texttt{Tile},
+that is, the value of the \texttt{counter} variable at the end
+of the algorithm is exactly $k$.
+Help to make that happen: print a field which Arkadiy will successfully cover
+with dominoes in such a way that function \texttt{Tile} will be called
+exactly $k$ times.
+
+\InputFile
+
+The first line of input contains one integer $k$:
+the required number of calls
+($1 \le k \le 10\,000\,000$).
+
+\OutputFile
+
+On the first line, print two integers $r$ and $c$ separated by a space:
+the dimensions of the field
+($1 \le r, c \le 100$).
+Starting from the second line, print $r$ lines, each containing $c$ characters:
+a rectangular field.
+Free squares are denoted by ``\texttt{.}'' (dot, ASCII code 46),
+and blocked squares are denoted by ``\texttt{x}''
+(lowercase letter ex, ASCII code 120).
+If there are several possible solutions, print any one of them.
+
+\Examples
+
+\begin{example}
+\exmp{%
+\verbatiminput{001.input}%
+}{%
+\verbatiminput{001.output}%
+}%
+\exmp{%
+\verbatiminput{002.input}%
+}{%
+\verbatiminput{002.output}%
+}%
+\end{example}
+
+\end{problem}

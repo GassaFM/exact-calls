@@ -1,0 +1,13 @@
+Function Tile acts as follows:
+1.  Increase counter by 1.
+2.  If no squares are free, return OK.
+3.  Let (row, col) be lexicographically first free square.
+4.  If square (row, col+1) exists and is free:
+4.1.    Put a domino on squares (row, col) and (row, col+1).
+4.2.    If call to Tile returns OK, return OK.
+4.3.    Remove the domino on squares (row, col) and (row, col+1).
+5.  If square (row+1, col) exists and is free:
+5.1.    Put a domino on squares (row, col) and (row+1, col).
+5.2.    If call to Tile returns OK, return OK.
+5.3.    Remove the domino on squares (row, col) and (row+1, col).
+6.  Return NO.

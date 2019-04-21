@@ -1,0 +1,15 @@
+#!/bin/bash
+IO_FILES=false
+USE_GRADERS=false
+PROBLEM=exact-calls
+AUTHOR=ik
+SUFFIX=
+LANGUAGE=d
+SOLUTION=../solutions/$PROBLEM\_$AUTHOR$SUFFIX.$LANGUAGE
+GENERATOR=gen.d
+VALIDATOR=validate.d
+CHECKER=../check.d
+TEST_PATTERN=[0-9][0-9][0-9]
+DO_CHECK=true
+DO_CLEAN=true
+CUSTOM_WIPE=
